@@ -11,7 +11,7 @@ sudo su
 docker search oracle
 
 # Utiizar imagem
-truevoly/oracle-12c                   Copy of sath89/oracle-12c image (https://git…   28
+truevoly/oracle-12c                   Copy of sath89/oracle-12c image ......
 
 # Baixar imagem
 docker pull truevoly/oracle-12c
