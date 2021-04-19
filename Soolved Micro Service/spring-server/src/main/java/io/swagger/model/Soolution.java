@@ -4,9 +4,11 @@ import java.io.Serializable;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -21,16 +23,19 @@ import javax.persistence.Table;
 @Table (name="soolution")
 public class Soolution  implements Serializable {
   @JsonProperty("id")
-  @Id
+  @Id @NotBlank
   private String id = null;
 
   @JsonProperty("description")
+  @NotBlank
   private String description = null;
 
   @JsonProperty("causa")
+  @NotBlank
   private String causa = null;
 
   @JsonProperty("solution")
+  @NotBlank
   private String solution = null;
 
   @JsonProperty("status")

@@ -37,9 +37,13 @@ public class HomeController {
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public ModelAndView save(@ModelAttribute("soolution") Soolution soolution) {
+        if (soolution.getId() == null
+                || soolution.getId().isEmpty()) {
+            String id = System.currentTimeMillis()  + "";
+            soolution.setId(id.substring(id.length() - 3, id.length()));
+        }
         soolutionRepository.save(soolution);
-
-        return new ModelAndView("index");
+        return new ModelAndView( "redirect:/");
     }
 
     @RequestMapping("/edit/{id}")
@@ -60,12 +64,12 @@ public class HomeController {
         registro.setStatus(soolution.getStatus());
         Soolution updated = soolutionRepository.save(registro);
 
-        return new ModelAndView("index");
+        return new ModelAndView( "redirect:/");
     }
 
     @RequestMapping("/delete/{id}")
     public ModelAndView delete(@PathVariable(name = "id") int id) {
         soolutionRepository.delete(id + "");
-        return new ModelAndView("index");
+        return new ModelAndView( "redirect:/");
     }
 }
