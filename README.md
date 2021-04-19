@@ -8,13 +8,13 @@
 
 
 # Uso da imagem Oracle 12 no Docker
-#terminal com usuario root
+# Terminal com usuario root
 sudo su
 
-#Listar imagens do oracle 12c
+# Listar imagens do oracle 12c
 docker search oracle
 
-#Utiizar imagem
+# Utiizar imagem
 truevoly/oracle-12c                   Copy of sath89/oracle-12c image ......
 
 # Baixar imagem
