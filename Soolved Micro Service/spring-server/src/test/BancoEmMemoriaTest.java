@@ -32,7 +32,7 @@ public class BancoEmMemoriaTest {
 
     @Test
     public void testeBancoEmMemoriaJpa() {
-        //Levei 8 horas pra resolver um bug e implementar isso, nao conhecia SpringBoot kkkkk :)
+        
         Soolution newSolutionTest = new Soolution();
         String testID = "-999999";
         newSolutionTest.setId(testID);
