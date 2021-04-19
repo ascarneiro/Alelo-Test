@@ -1,3 +1,6 @@
+# Contexto aplicacao
+ - http://localhost:8091/ascarneiro/Soolved/1.0.0/
+
 #Documentação Swager em pasta especifica
 
 #Swagger HUB?
