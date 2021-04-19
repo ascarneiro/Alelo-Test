@@ -7,7 +7,7 @@
 
 
 
-# Uso da imagem Oracle 12 no Docker
+# Uso da imagem Oracle 12c XE no Docker
 # Utilizar usuario root
 sudo su
 
