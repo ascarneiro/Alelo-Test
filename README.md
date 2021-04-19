@@ -1,12 +1,9 @@
 # Contexto aplicacao
  - http://localhost:8091/ascarneiro/Soolved/1.0.0/
 
-#Documentação Swager em pasta especifica
-
-#Swagger HUB?
-- https://app.swaggerhub.com/apis/ascarneiro/Soolved/1.0.0
-#Quando rodar aplicaçao pode ser acessada e testada em:
-- http://localhost:8091/ascarneiro/Soolved/1.0.0/swagger-ui.html
+# Documentação Swager
+- Swagger HUB? -> https://app.swaggerhub.com/apis/ascarneiro/Soolved/1.0.0
+- Na propria aplicacao -> http://localhost:8091/ascarneiro/Soolved/1.0.0/swagger-ui.html
 
 
 
