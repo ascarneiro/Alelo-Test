@@ -1,7 +1,9 @@
 #Documentação Swager em pasta especifica
+
 #Swagger HUB?
-      https://app.swaggerhub.com/apis/ascarneiro/Soolved/1.0.0
-#Quando rodar aplicaçao pode ser acessada e testada em: http://localhost:8091/ascarneiro/Soolved/1.0.0/swagger-ui.html
+- https://app.swaggerhub.com/apis/ascarneiro/Soolved/1.0.0
+#Quando rodar aplicaçao pode ser acessada e testada em:
+- http://localhost:8091/ascarneiro/Soolved/1.0.0/swagger-ui.html
 
 
 
