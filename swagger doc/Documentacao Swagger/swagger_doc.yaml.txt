@@ -1,0 +1,128 @@
+swagger: "2.0"
+info:
+  description: Esta api tem como objetivo a consulta de soluções para um determinado Bug ja resolvido com base na análise da causa. A API permite o registro, exclusão e alteração denominadas como Soolutions.
+  version: 1.0.0
+  title: Soolved
+host: localhost:8091
+basePath: /ascarneiro/Soolved/1.0.0
+schemes:
+- https
+- http
+paths:
+  /soolutions:
+    get:
+      summary: Busca por possiveis Soolutions para determinado Bug
+      description: Busca uma ou mais Soolution ja resolvidadas e que possui mesma causa do Bug
+      operationId: find
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: Bug
+        description: Bug a pesquisar por Soolution
+        required: false
+        schema:
+          $ref: '#/definitions/Bug'
+      responses:
+        "200":
+          description: Soolution
+          schema:
+            $ref: '#/definitions/Soolution'
+        "400":
+          description: Soolution para o bug ainda nao localizada
+        "500":
+          description: Erro interno
+    post:
+      summary: Adiciona nova Soolution
+      description: Adicionar Soolution
+      operationId: add
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: Soolution
+        description: Soolution a cadastrar
+        required: false
+        schema:
+          $ref: '#/definitions/Soolution'
+      responses:
+        "200":
+          description: Soolution cadastrada com sucesso
+        "400":
+          description: Falha ao cadastrar Soolution
+        "500":
+          description: Erro interno
+    put:
+      summary: Atualizar Soolution
+      description: Atualizar Soolution
+      operationId: update
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: Soolution
+        description: Soolution a atualizar
+        required: false
+        schema:
+          $ref: '#/definitions/Soolution'
+      responses:
+        "200":
+          description: Soolution atualizada com sucesso
+        "400":
+          description: Falha ao atualizar Soolution
+        "500":
+          description: Erro interno
+    delete:
+      summary: Remove uma Soolution já existente
+      description: Remover Soolution
+      operationId: delete
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: Soolution
+        description: Soolution a remover
+        required: false
+        schema:
+          $ref: '#/definitions/Soolution'
+      responses:
+        "200":
+          description: Soolution excluida com sucesso
+        "400":
+          description: Falha ao excluir Soolution
+        "500":
+          description: Erro interno
+definitions:
+  Bug:
+    type: object
+    properties:
+      causa:
+        type: string
+        example: Falha ao selecionar metodo de pagamento
+  Soolution:
+    type: object
+    properties:
+      id:
+        type: string
+        example: "1552"
+      description:
+        type: string
+        example: Falha ao selecionar [meio] de pagamento
+      causa:
+        type: string
+        example: Falha de programação
+      solution:
+        type: string
+        example: Corrigido bug na versão 2.06.[776]
+      status:
+        type: string
+        example: fixed
+
