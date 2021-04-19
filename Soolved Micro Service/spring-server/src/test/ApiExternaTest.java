@@ -22,7 +22,7 @@ public class ApiExternaTest {
 
     @Test
     public void testeApiExternaWireMock() {
-        //Levei 15 mins pra implementar isso easy esta api
+
         WireMock wm = new WireMockBuilder()
                 .scheme("https")
                 .host("ascarneiro.mocklab.io")
