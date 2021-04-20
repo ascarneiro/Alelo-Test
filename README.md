@@ -68,7 +68,7 @@ exit;  -- sair do sqlplus
 # Obter nome do SID
 $ORACLE_HOME/bin/lsnrctl status --Obter NOME_SERVICO DO listener (ABAIXO EXEMPLO) NESTE CASO xeXDB
 # Conectar no SQLPLUS com usuario bspdb
-oracle@d19feac14968:/$ $ORACLE_HOME/bin/sqlplus bspdb/123456@//192.168.40.183:31995/xeXDB 
+$ORACLE_HOME/bin/sqlplus bspdb/123456@//192.168.40.183:31995/xeXDB 
 
 
 
