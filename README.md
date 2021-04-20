@@ -49,14 +49,16 @@ shutdown;
 # Subir instancia
 startup;
 
+
+# Criar tablespace usuario bspdb
+create tablespace bspdb datafile '/u01/app/oracle/oradata/xe/bspdb.dbf' size 3000m;
+
 # Criar usuario bspdb
 create user bspdb identified by 123456 default tablespace bspdb;
 
 # Grant dba para bspdb
 grant dba, connect to bspdb;
 
-# Criar tablespace usuario bspdb
-create tablespace bspdb datafile '/u01/app/oracle/oradata/xe/bspdb.dbf' size 3000m;
 
 # Alterar senha usuario system
 alter user system identified by system;  
