@@ -69,8 +69,8 @@ exit;  -- sair do sqlplus
 $ORACLE_HOME/bin/lsnrctl status --Obter NOME_SERVICO DO listener (ABAIXO EXEMPLO) NESTE CASO xeXDB
 
 # Conectar no SQLPLUS com usuario bspdb
-$ORACLE_HOME/bin/sqlplus bspdb@xeXDB
-Enter password:123456
+- $ORACLE_HOME/bin/sqlplus bspdb@xeXDB
+- Enter password:123456
 
 
 
